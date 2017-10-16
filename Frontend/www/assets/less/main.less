@@ -1,3 +1,55 @@
-@mainColor: blue;
+@mainColor: #ee9000;
+@supportingColor: #DDD;
+@cartWidth: 310px;
+@topPanelWidth: 90px;
 
 @import "pizza/pizza-card";
+@import "pizza/main-block";
+@import "cart/shopping-cart";
+@import "cart/cart-item";
+@import "header/page-header";
+@import "discount/discount-label";
+@import "order";
+
+body{
+    min-width: 600px ;
+}
+
+.footer{
+    text-align: center;
+    padding-right: @cartWidth;
+    padding-top:30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #DDD;
+    color:darken(@supportingColor, 25%);
+}
+
+.element-coloring(@color, @backgroundColor){
+    color: @color;
+    background-color: @backgroundColor;
+}
+
+.button-builder(@color){
+    background-image: linear-gradient(to bottom, lighten(@color, 10%), @color);
+    border-color: darken(@color, 5%);
+}
+
+.label-builder(@color, @backgroundColor, @top, @height){
+    position: fixed;
+    
+    color: @color;
+    background-color: @backgroundColor;
+    top: @top;
+    height: @height;
+    width: 100px;
+    left: 10px;
+    text-align: center;
+    z-index: 99;
+}
+
+.label-addition-builder(){
+    position: absolute;
+    height: 11px;
+    width:100px;
+    background-image: url(../images/discount.svg);
+}

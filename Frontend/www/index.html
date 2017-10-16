@@ -15,58 +15,98 @@
 
 </head>
 <body>
-<div id="cart"></div>
-<div class="container">
-    <div class="row" id="pizza_list">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_1.jpg">
-
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 2</a>
-                        <a href="#" class="btn btn-default">Button 1</a>
-                    </p>
-                </div>
+    <div class="page-header navbar navbar-fixed-top">
+        <div class="site-label">
+            <a class="site-link" href="#">
+                <div class="site-link-text-1">PIZZA</div>
+                <div class="site-link-text-2">KMA</div>
+            </a>
+            <div class="site-label-bottom-part"></div>
+        </div>
+        <div class="page-header-top-part">
+            <div class="page-header-top-part-item contact-number visible-xs-inline-block visible-sm-inline-block visible-lg-inline-block visible-md-inline-block">
+                8 (800) 555 35 35
+            </div>
+            <div class="page-header-top-part-item work-days visible-lg-inline-block visible-md-inline-block">
+                24 години/ 7 днів на тиждень
+            </div>
+            <div class="page-header-top-part-item delivery visible-lg-inline-block">
+                Безкоштовна доставка піци
+            </div>
+            <div type="button" class="sign-in-button btn btn-warning">
+                Ввійти
             </div>
         </div>
-
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_2.jpg">
-
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 3</a>
-                        <a href="#" class="btn btn-default">Button 4</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_3.jpg">
-
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 5</a>
-                        <a href="#" class="btn btn-default">Button 6</a>
-                    </p>
-                </div>
-            </div>
+        <div class="page-header-bottom-part">
+            <a href="#" class="pizza-link hidden-xs">Піца</a>
         </div>
     </div>
-</div>
+    <div class="shopping-cart">
+        <div class="top-part">
+            <span class="shopping-cart-title">Замовлення
+                <span class="orders-count badge">0</span>
+            </span>
+            <span class="clear-orders">Очистити замовлення</span>
+        </div>
+        <div id="cart" class="pizza-orders">
+
+        </div>
+        <div class="bottom-part">
+            <span class="overall-price-title">Сума замовлення</span>
+            <span class="overall-price">1927 грн</span>
+            <div class="order-button-block">
+
+                <a type="button" class="order-button btn btn-warning btn-lg btn-block" href="order.html">
+                    Замовити
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="discount-label">
+        <div class="discount-label-top-part"></div>
+        <div class="discount-label-text-1">ЦЬОГО ТИЖНЯ НА ВСЕ</div>
+        <div class="discount-label-text-2">-20%</div>
+    </div>
+    <div class="container">
+            <div class="main-block">
+                <div class="pizza-title">
+                    <h2>
+                        <span class="pizza-count-title">Усі піци</span>
+                        <span class="pizza-count badge">8</span>
+                    </h2>
+                </div>
+                <div class="pizza-nav">
+                    <ul class="nav nav-pills pizza-nav-menu">
+                        <li class="pizza-nav-element active" id="all" role="presentation">
+                            <a href="#">Усі</a>
+                        </li>
+                        <li class="pizza-nav-element" id="meat" role="presentation">
+                            <a href="#">М'ясні</a>
+                        </li>
+                        <li class="pizza-nav-element" id="pineapple" role="presentation">
+                            <a href="#">З ананасами</a>
+                        </li>
+                        <li class="pizza-nav-element" id="mushrooms" role="presentation">
+                            <a href="#">З грибами</a>
+                        </li>
+                        <li class="pizza-nav-element" id="seafood" role="presentation">
+                            <a href="#">З морепродуктами</a>
+                        </li>
+                        <li class="pizza-nav-element" id="bera" role="presentation">
+                            <a href="#">Bera</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row" id="pizza_list">
+                </div>
+            </div>
+    </div>
+    <footer class="footer">
+        <p>Copyright © 2017 Коломєйцев Д.Б.</p>
+        <p>Доставка піци не здійснюється</p>
+    </footer>
 
 <!-- jQuery JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
@@ -75,6 +115,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!--Own JavaScript -->
-<!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
 </body>
 </html>

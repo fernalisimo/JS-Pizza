@@ -1,0 +1,49 @@
+
+.main-block{
+    
+    padding-right: @cartWidth;
+    padding-top: @topPanelWidth;
+}
+
+.pizza-title{
+    
+    h2{
+        text-align: center;
+    }
+    
+    .pizza-count{
+        background-color: @mainColor;
+    }
+}
+
+.pizza-nav{
+    
+    text-align: center;
+    
+    .pizza-nav-menu{
+        
+        display: inline-block;
+        float: none;
+        
+        .pizza-nav-element > a{
+            .element-coloring(@mainColor, white);
+        }
+        
+        .pizza-nav-element > a:hover{
+            background-color: #EEE;
+        }
+        
+        .active > a{
+            .element-coloring(white, @mainColor);
+        }
+
+        .active > a:hover{
+            .element-coloring(white, @mainColor);
+        }
+
+        .active > a:focus{
+            .element-coloring(white, @mainColor);
+        }
+    }
+}
+

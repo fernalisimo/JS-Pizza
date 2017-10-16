@@ -1,0 +1,93 @@
+.shopping-cart{
+    
+    position: fixed;
+    background-color: lighten(@supportingColor, 10%);
+    right:0;
+    margin:auto;
+    width:@cartWidth;
+    min-width:@cartWidth;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    
+    box-shadow: @supportingColor -3px 3px 10px;
+}
+
+.cart-title {
+    position: absolute;
+    top:40%;
+    left:4%;
+    font-size:1.4em;
+    font-weight: 700;
+    line-height: 15px;
+}
+.top-part{
+    
+    position: relative;
+    height:@topPanelWidth;
+    min-height:@topPanelWidth;
+    width: 100%;
+    background-color: white;
+
+   
+    .orders-count{
+        background-color: @mainColor;
+        
+    }
+    
+    .clear {
+        cursor: pointer;
+        position: absolute;
+        top:40%;
+        right: 4%;
+        
+        font-size: 0.73em;
+        line-height: 20px;
+        color:#999;
+    }
+}
+
+.pizza-orders{
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    
+    .empty-cart-text{
+        padding-top: 40px;
+        text-align: center;
+        font-size: 1.2em;
+    }
+}
+
+.bottom-part{
+    background-color: #FFF;
+    position: relative;
+    height: 120px;
+    min-height: 120px;
+    padding: 10px;
+    width: 100%;
+
+    .overalltitle {
+        font-weight: bold;
+    }
+
+    .overall {
+        font-size: 20px;
+        font-weight: bold;
+        float: right;
+    }
+
+    .order-button-block{
+        margin-top: 20px;
+    }
+
+    .order-button{
+        .button-builder(lighten(@mainColor, 5%));
+    }
+
+    .disabled-button{
+        pointer-events: none;
+    }
+}

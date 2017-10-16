@@ -1,0 +1,66 @@
+<% include common/header.ejs %>
+
+<div class="shopping-cart">
+    <div class="top-part">
+            <span class="cart-title">Замовлення
+                <span class="orders-count badge">0</span>
+            </span>
+        <span class="clear">Очистити замовлення</span>
+    </div>
+    <div id="cart" class="pizza-orders">
+
+    </div>
+    <div class="bottom-part">
+        <span class="overalltitle">Сума замовлення</span>
+        <span class="overall">1927 грн</span>
+        <div class="order-button-block">
+
+            <a type="button" class="order-button btn btn-warning btn-lg btn-block" href="order.html">
+                Замовити
+            </a>
+
+        </div>
+
+    </div>
+</div>
+<div class="discount">
+    <div class="discount-top"></div>
+    <div class="discount-1">ЦЬОГО ТИЖНЯ НА ВСЕ</div>
+    <div class="discount-2">-20%</div>
+</div>
+<div class="container">
+    <div class="main-block">
+        <div class="pizza-title">
+            <h2>
+                <span class="pizza-count-title">Усі піци</span>
+                <span class="pizza-count badge">8</span>
+            </h2>
+        </div>
+        <div class="pizza-nav">
+            <ul class="nav nav-pills pizza-nav-menu">
+                <li class="pizza-nav-element active" id="all" role="presentation">
+                    <a hreга="#">Усі</a>
+                </li>
+                <li class="pizza-nav-element" id="meat" role="presentation">
+                    <a href="#">М'ясні</a>
+                </li>
+                <li class="pizza-nav-element" id="pineapple" role="presentation">
+                    <a href="#">З ананасами</a>
+                </li>
+                <li class="pizza-nav-element" id="mushrooms" role="presentation">
+                    <a href="#">З грибами</a>
+                </li>
+                <li class="pizza-nav-element" id="seafood" role="presentation">
+                    <a href="#">З морепродуктами</a>
+                </li>
+                <li class="pizza-nav-element" id="bera" role="presentation">
+                    <a href="#">Bera</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row" id="pizza_list">
+        </div>
+    </div>
+</div>
+
+<% include common/footer.ejs %>

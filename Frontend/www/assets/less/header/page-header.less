@@ -1,0 +1,91 @@
+.page-header{
+
+    margin-top:0px;
+    height: @topPanelWidth;
+    width:100%;
+    background-color: black;
+    z-index: 80;
+    opacity: 0.8;
+    
+    padding-left: 110px;
+    padding-right: @cartWidth + 30px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    
+    .site-label{
+        .label-builder(white, #EA862E, 0, 90px);
+        padding-top: 15px;
+        
+        .site-link{
+            color:inherit;
+            text-decoration: none;
+            
+            .site-link-text-1{
+                font-size:19px;
+            }
+            
+            .site-link-text-2{
+                font-size:25px;
+            }
+        }
+        
+        .site-label-bottom-part{
+            .label-addition-builder();
+            
+            transform: scaleY(-1);
+            top:90px;
+        }
+    }
+    
+    .page-header-top-part{
+        margin-left:30px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #999;
+    }
+    
+    .page-header-top-part-item{
+        padding-right: 30px;
+        color: #999;
+    }
+    
+    .contact-number{
+        font-size: 20px;
+    }
+
+    .work-days{
+        font-size: 12px;
+    }
+
+    .delivery{
+        font-size: 16px;
+    }
+
+    .sign-in-button{
+        .button-builder(@mainColor);
+        float:right;
+    }
+    
+    .page-header-bottom-part{
+        padding-top: 8px;
+        padding-left: 30px;
+        font-size: 16px;
+        
+        .pizza-link{  
+            color:white;
+        }
+    }
+}
+
+
+@media (max-width: 700px) {
+  .contact-number {
+      padding: 0px !important;
+      font-size:14px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .page-header {
+      height: @topPanelWidth*1.75;
+  }
+}

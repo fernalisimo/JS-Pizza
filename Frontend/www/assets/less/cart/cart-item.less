@@ -1,0 +1,64 @@
+
+.cart-item{
+
+  position: relative;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 0px 20px 20px 20px;
+
+  .order-image{
+    position: absolute;
+    border-radius: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    right: -48px;
+  }
+
+  h3{
+    color: @mainColor;
+    font-size: 19px;
+  }
+
+  .diagonal{
+    padding-right: 10px;
+  }
+
+  .order-details{
+
+    padding-top: 10px;
+
+    .price{
+      font-weight: bold;
+      padding-right: 10px;
+    }
+
+    .btn{
+      border-radius: 50%;
+      padding: 4px 8px;
+    }
+
+    .minus{
+      border-bottom: 3px solid #d43f3a;
+    }
+
+    .order-pizza-count{
+      font-size: 14px;
+    }
+
+    .plus{
+      border-bottom: 3px solid #4cae4c;
+    }
+
+    .count-clear{
+      margin-left: 20px;
+      padding: 5px 8px;
+      background-image: linear-gradient(to top, #DBDBDB, helvetica);
+      color: @mainColor;
+    }
+  }
+  
+  .non-editable{
+    .minus, .plus, .count-clear{
+      visibility: hidden;
+    }
+  }
+}

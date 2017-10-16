@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by chaika on 02.02.16.
  */
 var Templates = require('../Templates');
@@ -35,20 +35,52 @@ function filterPizza(filter) {
     //Масив куди потраплять піци які треба показати
     var pizza_shown = [];
 
-    Pizza_List.forEach(function(pizza){
+    Pizza_List.getPizzaList().forEach(function(pizza){
         //Якщо піка відповідає фільтру
-        //pizza_shown.push(pizza);
-
-        //TODO: зробити фільтри
+        if(pizza.content.hasOwnProperty(filter)) {
+            pizza_shown.push(pizza);
+        }
     });
 
     //Показати відфільтровані піци
     showPizzaList(pizza_shown);
 }
 
+function changeActiveFilterElement(elementId){
+    var navigation = $(".pizza-nav");
+    navigation.find(".active").removeClass("active");
+    navigation.find(elementId).addClass("active");
+}
+
 function initialiseMenu() {
     //Показуємо усі піци
-    showPizzaList(Pizza_List)
+    showPizzaList(Pizza_List.getPizzaList())
+
+    //pizza filter (супербыдлокодерство)
+    $(document).on("click", "#all", function(){
+        changeActiveFilterElement("#all");
+        showPizzaList(Pizza_List.getPizzaList());
+    });
+    $(document).on("click", "#meat", function(){
+        changeActiveFilterElement("#meat");
+        filterPizza('meat');
+    });
+    $(document).on("click", "#pineapple", function(){
+        changeActiveFilterElement("#pineapple");
+        filterPizza('pineapple');
+    });
+    $(document).on("click", "#mushrooms", function(){
+        changeActiveFilterElement("#mushrooms");
+        filterPizza('mushroom');
+    });
+    $(document).on("click", "#seafood", function(){
+        changeActiveFilterElement("#seafood");
+        filterPizza('ocean');
+    });
+    $(document).on("click", "#bera", function(){
+        changeActiveFilterElement("#bera");
+        filterPizza('tomato');
+    });
 }
 
 exports.filterPizza = filterPizza;
